@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import App from './App';
+import GeolocationExample from './app/GeolocationExample';
 
-AppRegistry.registerComponent('AndresProject', () => App);
+AppRegistry.registerComponent('RaceProject', () => GeolocationExample);

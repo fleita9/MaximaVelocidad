@@ -12,9 +12,6 @@ import {
   View
 } from 'react-native';
 
-import MapView from 'react-native-maps'
-import Dimensions from 'Dimensions';
-
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
@@ -22,45 +19,19 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-const { width, height } = Dimensions.get('window');
-
-var ASPECT_RATIO = width / height;
-let LATITUDE;
-let LONGITUDE;
-let LATITUDE_DELTA = 0.2922;
-let LONGITUDE_DELTA;
-
 export default class App extends Component<{}> {
-
-   constructor(props) {
-    super(props);
-
-    this.state = {
-      mapType: 'standard'
-    }
-  }
-
-  componentWillMount() {
-    LATITUDE = -34.593168;
-    LONGITUDE = -58.4104707;
-    LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
-  }
-
   render() {
     return (
-      <View>
-        <MapView
-          ref={'mapview'}
-          customMapStyle={[] /* require('../jsons/mapStyle.json') */}
-          style={styles.map}
-          mapType={this.state.mapType}
-          initialRegion={{
-            latitude: LATITUDE,
-            longitude: LONGITUDE,
-            latitudeDelta: LATITUDE_DELTA,
-            longitudeDelta: LONGITUDE_DELTA,
-          }}
-        />
+      <View style={styles.container}>
+        <Text style={styles.welcome}>
+          Welcome to React Native!
+        </Text>
+        <Text style={styles.instructions}>
+          To get started, edit App.js
+        </Text>
+        <Text style={styles.instructions}>
+          {instructions}
+        </Text>
       </View>
     );
   }

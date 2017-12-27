@@ -1,5 +1,5 @@
 {
-  "name": "AndresProject",
+  "name": "RaceProject",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,15 +7,15 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "16.0.0-beta.5",
-    "react-native": "0.49.3",
-    "react-native-maps": "^0.16.4"
+    "react": "16.0.0",
+    "react-native": "0.50.1",
+    "react-native-fs": "^2.8.5"
   },
   "devDependencies": {
     "babel-jest": "21.2.0",
     "babel-preset-react-native": "4.0.0",
     "jest": "21.2.1",
-    "react-test-renderer": "16.0.0-beta.5"
+    "react-test-renderer": "16.0.0"
   },
   "jest": {
     "preset": "react-native"
